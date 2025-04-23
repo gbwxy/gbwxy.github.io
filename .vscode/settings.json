@@ -1,5 +1,7 @@
 {
     "markdown.preview.openMarkdownLinks": "inPreview",
     "markdown.preview.breaks": true,
-    "markdown.preview.typographer": true
+    "markdown.preview.typographer": true,
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true
 }
