@@ -1,5 +1,5 @@
-* [算法](./docs/A_alg/)
-* [Java](./docs/B_java/)
+* [主页](/)
+* [Java](/docs/Java/)
 * [MySQL](./docs/C_mysql/)
 * [Spring](./docs/D_spring/)
 * [Springcloud](./docs/G_springcloud/)
