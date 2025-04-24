@@ -11,4 +11,5 @@
 * [Graph](./docs/A_alg/G_Graph.md)
 * [Master公式](/docs/alg/MasterFunc.md)
 * [其他算法](/docs/alg/OtherAlgorithm.md)
+* [Leetcode](/docs/alg/leedcode/)
 
