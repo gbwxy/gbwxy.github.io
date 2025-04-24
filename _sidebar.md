@@ -1,4 +1,4 @@
-* [主页](/)
+* [首页](/)
 * [Java](/docs/Java/)
 * [SpringCloud](/docs/Springcloud/)
 * [MySQL](/docs/Mysql/)

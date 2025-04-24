@@ -1,4 +1,5 @@
-* [返回](./)
+* [返回首页](/)
+* [MySQL](/docs/Mysql/)
 * [索引](/docs/Mysql/index.md)
 * [SQL调优](/docs/Mysql/Optimization.md)
 * [事务&锁](/docs/Mysql/Transaction.md)

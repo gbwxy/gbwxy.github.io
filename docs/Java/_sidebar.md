@@ -1,4 +1,5 @@
-* [主页](/)
+* [返回首页](/)
+* [Java](/docs/Java/)
 * [HashMap](/docs/Java/HashMap.md)
 * [JMM](/docs/Java/JMM.md)
 * [线程](/docs/Java/Thread.md)
