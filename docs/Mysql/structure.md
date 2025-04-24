@@ -1,5 +1,3 @@
-[TOC]
-
 # MySQL 各组件简介
 
 ![image-20230417203749562](./../../resources/image/mysql/MySQL的组成.png)
