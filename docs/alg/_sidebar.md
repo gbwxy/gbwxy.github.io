@@ -6,10 +6,11 @@
 * [List](/docs/alg/Array.md)
 * [String](/docs/alg/String.md)
 * [Queue](/docs/alg/Queue.md)
+* [PriorityQueue](/docs/alg/PriorityQueue.md)
 * [动态规划](/docs/alg/DynamicProgramming.md)
 * [Tree](/docs/alg/Tree.md)
 * [Graph](./docs/A_alg/G_Graph.md)
 * [Master公式](/docs/alg/MasterFunc.md)
 * [其他算法](/docs/alg/OtherAlgorithm.md)
-* [Leetcode](/docs/alg/leedcode/)
+* [Leetcode](/docs/alg/leetcode/)
 
