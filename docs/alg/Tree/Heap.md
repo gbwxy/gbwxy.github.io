@@ -1,3 +1,17 @@
+# Heap 堆
+
+Heap 是一种数据结构具有以下的特点：
+
+- 完全二叉树；
+- heap中存储的值是偏序；
+- Min-heap 小根堆: 父节点的值小于或等于子节点的值；
+- Max-heap 大根堆: 父节点的值大于或等于子节点的值；
+- heapInsert(arr,idx) idx 上面的树是符合规则的，往上移动
+- heapify(arr,idx,heapSize) idx 下面的树是符合规则的，往下沉
+
+![](./../../resources/image/algoruthm/Max&Min-heap.png)
+![](./../../resources/image/algoruthm/heap-structure.png)
+
 # PriorityQueue
 Java 中的 PriorityQueue 是基于一个 最小堆（Min-Heap） 实现的。
 
