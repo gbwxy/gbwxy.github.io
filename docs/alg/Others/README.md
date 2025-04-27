@@ -1,9 +1,5 @@
 # 其他算法总结
 
-* [KMP](/docs/alg/Others/KMP.md)
-* [Manacher](/docs/alg/Others/Manacher.md)
-* [布隆过滤器](/docs/alg/Others/BloomFilter.md)
-* [一致性哈希](/docs/alg/Others/ConsistentHash.md)
 
 ## 参考
 

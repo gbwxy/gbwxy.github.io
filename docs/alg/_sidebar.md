@@ -4,14 +4,14 @@
     * [经典排序算法](/docs/alg/Base/ClassicSort.md)
     * [排序相关技巧](/docs/alg/Base/SortSkills.md)
     * [异或运算](/docs/alg/Base/BitOperation.md)
-    * [数组]
+    * [数组](/docs/alg/Base/)
         * [二分法](/docs/alg/Base/Dichotomy.md)
         * [数组中第k小元素-bfprt](/docs/alg/Base/bfprt.md) 
-    * [String]
+    * [String](/docs/alg/Base/)
         * [字符串匹配-KMP](/docs/alg/Base/KMP.md)
         * [最长回文子串-Manacher](/docs/alg/Base/Manacher.md)
 * [链表](/docs/alg/List.md)
-* [队列和栈]
+* [队列和栈](/docs/alg/)
     * [队列](/docs/alg/Queue.md)
     * [单调栈](/docs/alg/Stack.md)
 * [树结构](/docs/alg/Tree/)
