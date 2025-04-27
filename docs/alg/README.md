@@ -1,13 +1,40 @@
 # 算法总结
+## Master 公式
 
-* [排序算法](/docs/alg/Sort.md)
-* [二进制运算](/docs/alg/BitOperation.md)
-* [数组](/docs/alg/Array.md)
-* [链表](/docs/alg/List.md)
-* [队列和栈](/docs/alg/Queue.md)
-* [树结构](/docs/alg/Tree/)
-* [动态规划](/docs/alg/DynamicProgramming.md)
-* [Graph](/docs/alg/Graph.md)
-* [Master公式](/docs/alg/MasterFunc.md)
-* [其他算法](/docs/alg/Others/)
-* [解题技巧](/docs/alg/TheSkills.md)
+### 什么是 Master 公式
+
+Master 公式是用来利用分治策略解决问题经常使用的时间复杂度的分析方法
+
+分治策略中使用递归来求解问题分为三步走，分别为分解、解决和合并
+
+### Master 公式解释
+
+![](./../../resources/image/algoruthm/Master公式.png)
+
+- a：生成的子问题数（比如二叉树的递归遍历就是 a = 2)
+- b：表示每次递归是母问题的1/b的数据规模
+- N：母问题的数据规模
+- d：额外操作的次数
+
+**注：使用Master公式分析递归问题时间复杂度时，各子问题的数据规模应该是一致的，否则不能使用Master公式。**
+
+## 子串、子序列
+
+对于一个字符串而言，比如：pikachu
+
+- 字串是在字符串中，取出一块（连续的），如：pik, ach, kac等
+- 子序列指的是从字符串中，顺序取出字符，但是可以不连续：如：pau, kch, icu等
+
+## 资源限制技巧汇总
+
+- 布隆过滤器用于集合的建立与查询，并可以节省大量空间
+- 一致性哈希解决数据服务器的负载管理问题
+- 利用并查集结构做岛问题的并行计算
+- 哈希函数可以把数据按照种类均匀分流
+- 位图解决某一范围上数字的出现情况，并可以节省大量空间
+- 利用分段统计思想，进一步节省大量空间
+- 利用堆、外排序来做出出力单元的结果合并
+
+
+## 题目详解
+* [刷题](/docs/alg/leetcode/)
