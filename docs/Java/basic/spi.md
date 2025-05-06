@@ -1,22 +1,10 @@
----
-title: Java SPI 机制详解
-category: Java
-tag:
-  - Java基础
-head:
-  - - meta
-    - name: keywords
-      content: Java SPI机制
-  - - meta
-    - name: description
-      content: SPI 即 Service Provider Interface ，字面意思就是：“服务提供者的接口”，我的理解是：专门提供给服务提供者或者扩展框架功能的开发者去使用的一个接口。SPI 将服务接口和具体的服务实现分离开来，将服务调用方和服务实现者解耦，能够提升程序的扩展性、可维护性。修改或者替换服务实现并不需要修改调用方。
----
+# SPI vs. API 
 
 > 本文来自 [Kingshion](https://github.com/jjx0708) 投稿。欢迎更多朋友参与到 JavaGuide 的维护工作，这是一件非常有意义的事情。详细信息请看：[JavaGuide 贡献指南](https://javaguide.cn/javaguide/contribution-guideline.html) 。
 
 面向对象设计鼓励模块间基于接口而非具体实现编程，以降低模块间的耦合，遵循依赖倒置原则，并支持开闭原则（对扩展开放，对修改封闭）。然而，直接依赖具体实现会导致在替换实现时需要修改代码，违背了开闭原则。为了解决这个问题，SPI 应运而生，它提供了一种服务发现机制，允许在程序外部动态指定具体实现。这与控制反转（IoC）的思想相似，将组件装配的控制权移交给了程序之外。
 
-SPI 机制也解决了 Java 类加载体系中双亲委派模型带来的限制。[双亲委派模型](https://javaguide.cn/java/jvm/classloader.html)虽然保证了核心库的安全性和一致性，但也限制了核心库或扩展库加载应用程序类路径上的类（通常由第三方实现）。SPI 允许核心或扩展库定义服务接口，第三方开发者提供并部署实现，SPI 服务加载机制则在运行时动态发现并加载这些实现。例如，JDBC 4.0 及之后版本利用 SPI 自动发现和加载数据库驱动，开发者只需将驱动 JAR 包放置在类路径下即可，无需使用`Class.forName()`显式加载驱动类。
+SPI 机制也解决了 Java 类加载体系中双亲委派模型带来的限制。[双亲委派模型](../JVM/ClassLoader.md)虽然保证了核心库的安全性和一致性，但也限制了核心库或扩展库加载应用程序类路径上的类（通常由第三方实现）。SPI 允许核心或扩展库定义服务接口，第三方开发者提供并部署实现，SPI 服务加载机制则在运行时动态发现并加载这些实现。例如，JDBC 4.0 及之后版本利用 SPI 自动发现和加载数据库驱动，开发者只需将驱动 JAR 包放置在类路径下即可，无需使用`Class.forName()`显式加载驱动类。
 
 ## SPI 介绍
 
@@ -28,7 +16,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 很多框架都使用了 Java 的 SPI 机制，比如：Spring 框架、数据库加载驱动、日志接口、以及 Dubbo 的扩展实现等等。
 
-<img src="https://oss.javaguide.cn/github/javaguide/java/basis/spi/22e1830e0b0e4115a882751f6c417857tplv-k3u1fbpfcp-zoom-1.jpeg" style="zoom:50%;" />
+<img src="../../../resources/image/Java/22e1830e0b0e4115a882751f6c417857tplv-k3u1fbpfcp-zoom-1.jpeg" style="zoom:50%;" />
 
 ### SPI 和 API 有什么区别？
 
@@ -36,7 +24,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 说到 SPI 就不得不说一下 API（Application Programming Interface） 了，从广义上来说它们都属于接口，而且很容易混淆。下面先用一张图说明一下：
 
-![SPI VS API](https://oss.javaguide.cn/github/javaguide/java/basis/spi-vs-api.png)
+![SPI VS API](../../../resources/image/Java/spi-vs-api.png)
 
 一般模块之间都是通过接口进行通讯，因此我们在服务调用方和服务实现方（也称服务提供者）之间引入一个“接口”。
 
@@ -45,11 +33,18 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 举个通俗易懂的例子：公司 H 是一家科技公司，新设计了一款芯片，然后现在需要量产了，而市面上有好几家芯片制造业公司，这个时候，只要 H 公司指定好了这芯片生产的标准（定义好了接口标准），那么这些合作的芯片公司（服务提供者）就按照标准交付自家特色的芯片（提供不同方案的实现，但是给出来的结果是一样的）。
 
+### SPI 的优缺点？
+
+通过 SPI 机制能够大大地提高接口设计的灵活性，但是 SPI 机制也存在一些缺点，比如：
+
+- 需要遍历加载所有的实现类，不能做到按需加载，这样效率还是相对较低的。
+- 当多个 `ServiceLoader` 同时 `load` 时，会有并发问题。
+
 ## 实战演示
 
 SLF4J （Simple Logging Facade for Java）是 Java 的一个日志门面（接口），其具体实现有几种，比如：Logback、Log4j、Log4j2 等等，而且还可以切换，在切换日志具体实现的时候我们是不需要更改项目代码的，只需要在 Maven 依赖里面修改一些 pom 依赖就好了。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/image-20220723213306039-165858318917813.png)
+![](../../../resources/image/Java/image-20220723213306039-165858318917813.png)
 
 这就是依赖 SPI 机制实现的，那我们接下来就实现一个简易版本的日志框架。
 
@@ -221,11 +216,11 @@ public class Logback implements Logger {
 
 新建 lib 目录，然后将 jar 包拷贝过来，再添加到项目中。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/523d5e25198444d3b112baf68ce49daetplv-k3u1fbpfcp-watermark.png)
+![](../../../resources/image/Java/523d5e25198444d3b112baf68ce49daetplv-k3u1fbpfcp-watermark.png)
 
 再点击 OK 。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/f4ba0aa71e9b4d509b9159892a220850tplv-k3u1fbpfcp-watermark.png)
+![](../../../resources/image/Java/f4ba0aa71e9b4d509b9159892a220850tplv-k3u1fbpfcp-watermark.png)
 
 接下来就可以在项目中导入 jar 包里面的一些类和方法了，就像 JDK 工具类导包一样的。
 
@@ -245,7 +240,7 @@ public class Logback implements Logger {
 
 然后先导入 `Logger` 的接口 jar 包，再导入具体的实现类的 jar 包。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/image-20220723215812708-165858469599214.png)
+![](../../../resources/image/Java/image-20220723215812708-165858469599214.png)
 
 新建 Main 方法测试：
 
@@ -561,5 +556,3 @@ public class MyServiceLoader<S> {
 
 1. 遍历加载所有的实现类，这样效率还是相对较低的；
 2. 当多个 `ServiceLoader` 同时 `load` 时，会有并发问题。
-
-<!-- @include: @article-footer.snippet.md -->

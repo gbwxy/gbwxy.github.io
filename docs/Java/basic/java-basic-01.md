@@ -80,17 +80,17 @@ JRE 是运行已编译 Java 程序所需的环境，主要包含以下两个部�
 > - [基本功 | Java 即时编译器原理解析及实践 - 美团技术团队](https://tech.meituan.com/2020/10/22/java-jit-practice-in-meituan.html)
 > - [基于静态编译构建微服务应用 - 阿里巴巴中间件](https://mp.weixin.qq.com/s/4haTyXUmh8m-dBQaEzwDJw)
 
-![Java程序转变为机器代码的过程](https://oss.javaguide.cn/github/javaguide/java/basis/java-code-to-machine-code-with-jit.png)
+![Java程序转变为机器代码的过程](../../../resources/image/Java/java-code-to-machine-code-with-jit.png)
 
 > HotSpot 采用了惰性评估(Lazy Evaluation)的做法，根据二八定律，消耗大部分系统资源的只有那一小部分的代码（热点代码），而这也就是 JIT 所需要编译的部分。JVM 会根据代码每次被执行的情况收集信息并相应地做出一些优化，因此执行的次数越多，它的速度就越快。
 
 JDK、JRE、JVM、JIT 这四者的关系如下图所示。
 
-![JDK、JRE、JVM、JIT 这四者的关系](https://oss.javaguide.cn/github/javaguide/java/basis/jdk-jre-jvm-jit.png)
+![JDK、JRE、JVM、JIT 这四者的关系](../../../resources/image/Java/jdk-jre-jvm-jit.png)
 
 下面这张图是 JVM 的大致结构模型。
 
-![JVM 的大致结构模型](https://oss.javaguide.cn/github/javaguide/java/basis/jvm-rough-structure-model.png)
+![JVM 的大致结构模型](../../../resources/image/Java/jvm-rough-structure-model.png)
 
 ## 为什么说 Java 语言“编译与解释并存”？
 
@@ -116,7 +116,7 @@ JDK 9 引入了一种新的编译模式 **AOT(Ahead of Time Compilation)** 。�
 
 **JIT 与 AOT 两者的关键指标对比**:
 
-<img src="https://oss.javaguide.cn/github/javaguide/java/basis/jit-vs-aot.png" alt="JIT vs AOT" style="zoom: 25%;" />
+<img src="../../../resources/image/Java/jit-vs-aot.png" alt="JIT vs AOT" style="zoom: 25%;" />
 
 可以看出，AOT 的主要优势在于启动时间、内存占用和打包体积。JIT 的主要优势在于具备更高的极限处理能力，可以降低请求的最大延迟。
 

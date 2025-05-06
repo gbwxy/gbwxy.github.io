@@ -1,9 +1,3 @@
----
-title: Java 代理模式详解
-category: Java
-tag:
-  - Java基础
----
 
 ## 1. 代理模式
 
@@ -13,7 +7,7 @@ tag:
 
 举个例子：新娘找来了自己的姨妈来代替自己处理新郎的提问，新娘收到的提问都是经过姨妈处理过滤之后的。姨妈在这里就可以看作是代理你的代理对象，代理的行为（方法）是接收和回复新郎的提问。
 
-![Understanding the Proxy Design Pattern | by Mithun Sasidharan | Medium](https://oss.javaguide.cn/2020-8/1*DjWCgTFm-xqbhbNQVsaWQw.png)
+![Understanding the Proxy Design Pattern | by Mithun Sasidharan | Medium](../../../resources/image/Java/DjWCgTFm-xqbhbNQVsaWQw.png)
 
 <p style="text-align:right;font-size:13px;color:gray">https://medium.com/@mithunsasidharan/understanding-the-proxy-design-pattern-5e63fe38052a</p>
 
@@ -400,5 +394,3 @@ after method send
 这篇文章中主要介绍了代理模式的两种实现：静态代理以及动态代理。涵盖了静态代理和动态代理实战、静态代理和动态代理的区别、JDK 动态代理和 Cglib 动态代理区别等内容。
 
 文中涉及到的所有源码，你可以在这里找到：[https://github.com/Snailclimb/guide-rpc-framework-learning/tree/master/src/main/java/github/javaguide/proxy](https://github.com/Snailclimb/guide-rpc-framework-learning/tree/master/src/main/java/github/javaguide/proxy) 。
-
-<!-- @include: @article-footer.snippet.md -->
