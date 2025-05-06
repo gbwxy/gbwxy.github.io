@@ -1,9 +1,4 @@
----
-title: BigDecimal 详解
-category: Java
-tag:
-  - Java基础
----
+# BigDecimal
 
 《阿里巴巴 Java 开发手册》中提到：“为了避免精度丢失，可以使用 `BigDecimal` 来进行浮点数的运算”。
 
@@ -46,7 +41,7 @@ System.out.println(a == b);// false
 
 《阿里巴巴 Java 开发手册》中提到：**浮点数之间的等值判断，基本数据类型不能用 == 来比较，包装数据类型不能用 equals 来判断。**
 
-![](https://oss.javaguide.cn/javaguide/image-20211213101646884.png)
+![](../../../resources/image/Java/image-20211213101646884.png)
 
 具体原因我们在上面已经详细介绍了，这里就不多提了。
 
@@ -71,7 +66,7 @@ System.out.println(x.compareTo(y));// 0
 
 《阿里巴巴 Java 开发手册》对这部分内容也有提到，如下图所示。
 
-![](https://oss.javaguide.cn/javaguide/image-20211213102222601.png)
+![](../../../resources/image/Java/image-20211213102222601.png)
 
 ### 加减乘除
 
@@ -142,7 +137,7 @@ System.out.println(n);// 1.255
 
 《阿里巴巴 Java 开发手册》中提到：
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/image-20220714161315993.png)
+![](../../../resources/image/Java/image-20220714161315993.png)
 
 `BigDecimal` 使用 `equals()` 方法进行等值比较出现问题的代码示例：
 
@@ -156,7 +151,7 @@ System.out.println(a.equals(b));//false
 
 1.0 的 scale 是 1，1 的 scale 是 0，因此 `a.equals(b)` 的结果是 false。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/image-20220714164706390.png)
+![](../../../resources/image/Java/image-20220714164706390.png)
 
 `compareTo()` 方法可以比较两个 `BigDecimal` 的值，如果相等就返回 0，如果第 1 个数比第 2 个数大则返回 1，反之返回-1。
 
@@ -351,14 +346,42 @@ public class BigDecimalUtil {
 }
 ```
 
-相关 issue：[建议对保留规则设置为 RoundingMode.HALF_EVEN,即四舍六入五成双,#2129](https://github.com/Snailclimb/JavaGuide/issues/2129) 。
-
-![RoundingMode.HALF_EVEN](https://oss.javaguide.cn/github/javaguide/java/basis/RoundingMode.HALF_EVEN.png)
+> 建议对保留规则设置为 RoundingMode.HALF_EVEN,即四舍六入五成双
+>
+> 文档里BigDecimalUtil类选择的保留规则是RoundingMode.HALF_UP，即四舍五入。代码部分如下：
+> ```
+> /**
+>     * 提供精确的小数位四舍五入处理。
+>     *
+>     * @param v     需要四舍五入的数字
+>     * @param scale 小数点后保留几位
+>     * @return 四舍五入后的结果
+>     */
+>    public static double round(double v, int scale) {
+>        if (scale < 0) {
+>            throw new IllegalArgumentException(
+>                    "The scale must be a positive integer or zero");
+>        }
+>        BigDecimal b = BigDecimal.valueOf(v);
+>        BigDecimal one = new BigDecimal("1");
+>        return b.divide(one, scale, RoundingMode.HALF_UP).doubleValue();
+>    }
+> ```
+>
+> 建议修改为BigDecimal.ROUND_HALF_EVEN，也就是RoundingMode.HALF_EVEN，即四舍六入五成双
+> 
+> ![RoundingMode.HALF_EVEN](../../../resources/image/Java/RoundingMode.HALF_EVEN.png)
+> 
+> 我就把百度的四舍六入五成双规则贴过来了：
+> 对于位数很多的近似数，当有效位数确定后，其后面多余的数字应该舍去，只保留有效数字最末一位，这种修约（舍入）规则是“四舍六入五成双”，也即“4舍6入5凑偶”，这里“四”是指≤4 时舍去，"六"是指≥6时进上，"五"指的是根据5后面的数字来定，当5后有数时，舍5入1；当5后无有效数字时，需要分两种情况来讲：
+> （1）5前为奇数，舍5入1；
+> （2）5前为偶数，舍5不进（0是偶数）。
+> 推荐使用四舍六入五成双规则的原因：
+> 从统计学的角度，“四舍六入五成双”比“四舍五入”要科学，在大量运算时，它使舍入后的结果误差的均值趋于零，而不是像四舍五入那样逢五就入，导致结果偏向大数，使得误差产生积累进而产生系统误差，“四舍六入五成双”使测量结果受到舍入误差的影响降到最低。
+> 
 
 ## 总结
 
 浮点数没有办法用二进制精确表示，因此存在精度丢失的风险。
 
 不过，Java 提供了`BigDecimal` 来操作浮点数。`BigDecimal` 的实现利用到了 `BigInteger` （用来操作大整数）, 所不同的是 `BigDecimal` 加入了小数位的概念。
-
-<!-- @include: @article-footer.snippet.md -->
