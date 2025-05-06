@@ -1,3 +1,8 @@
 # Java 知识总结
 
-包含 Java基础、集合框架、线程和线程池、多线程与并发、JVM等等
+* [基础概念与常识](/docs/Java/)
+* [基本语法](/docs/Java/)
+* [集合](/docs/Java/)
+* [并发编程](/docs/Java/)
+* [IO](/docs/Java/)
+* [JVM](/docs/Java/)
