@@ -1,9 +1,4 @@
----
-title: CAP & BASE理论详解
-category: 分布式
-tag:
-  - 分布式理论
----
+# CAP & BASE理论详解
 
 经历过技术面试的小伙伴想必对 CAP & BASE 这个两个理论已经再熟悉不过了！
 

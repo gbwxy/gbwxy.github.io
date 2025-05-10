@@ -1,19 +1,3 @@
----
-title: Dubbo常见问题总结
-category: 分布式
-tag:
-  - rpc
----
-
-::: tip
-
-- Dubbo3 已经发布，这篇文章是基于 Dubbo2 写的。Dubbo3 基于 Dubbo2 演进而来，在保持原有核心功能特性的同时， Dubbo3 在易用性、超大规模微服务实践、云原生基础设施适配、安全设计等几大方向上进行了全面升级。
-- 本文中的很多链接已经失效，主要原因是因为 Dubbo 官方文档进行了修改导致 URL 失效。
-
-:::
-
-这篇文章是我根据官方文档以及自己平时的使用情况，对 Dubbo 所做的一个总结。欢迎补充！
-
 ## Dubbo 基础
 
 ### 什么是 Dubbo?
@@ -457,5 +441,3 @@ Kryo 和 FST 这两种序列化方式是 Dubbo 后来才引入的，性能非常
 Dubbo 官方文档中还有一个关于这些[序列化协议的性能对比图](https://dubbo.apache.org/zh/docs/v2.7/user/serialization/#m-zhdocsv27userserialization)可供参考。
 
 ![序列化协议的性能对比](https://oss.javaguide.cn/github/javaguide/distributed-system/rpc/dubbo-serialization-protocol-performance-comparison.png)
-
-<!-- @include: @article-footer.snippet.md -->

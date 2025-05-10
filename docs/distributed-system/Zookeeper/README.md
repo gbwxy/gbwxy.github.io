@@ -4,23 +4,18 @@
 
 在这里你将学习到什么：
 
-* [Zookeeper](./docs/zookeeper/)
-* [ZooKeeper-是什么](./docs/zookeeper/01_zookeeper_what.md)
-  * 从 ACID 到 CAP/BASE
-  * ZooKeeper 的由来
-  * ZooKeeper 概览
-  * 面试题总结
-* [ZooKeeper  之 Paxos 算法和 ZAB 协议 ](./docs/zookeeper/01_zookeeper_zab.md)
-* [ZooKeeper 之基本概念与使用](./docs/zookeeper/02_zookeeper_use.md)
-* [ZooKeeper 之 Watcher](./docs/zookeeper/06_zookeeper_watcher.md)
-* [ZooKeeper 之 ACL](./docs/zookeeper/06_zookeeper_acl.md)
-* [ZooKeeper 之客户端 API 的使用](./docs/zookeeper/03_zookeeper_client.md)
-* [ZooKeeper 之 Curator](./docs/zookeeper/04_zookeeper_curator.md)
-* [ZooKeeper 之使用场景总结](./docs/zookeeper/05_zookeeper_scenes.md)
-* [ZooKeeper 之 Leader 选举](./docs/zookeeper/06_zookeeper_leader.md)
-* [ZooKeeper 之数据同步](./docs/zookeeper/06_zookeeper_data.md)
-* [ZooKeeper 之 Session](./docs/zookeeper/06_zookeeper_session.md)
-* [ZooKeeper 之其他核心知识点](./docs/zookeeper/06_zookeeper_core.md)
+* [ZooKeeper-是什么](/docs/distributed-system/Zookeeper/01_zookeeper_what.md)
+* [ZooKeeper 之 Paxos 和 ZAB](/docs/distributed-system/Zookeeper/01_zookeeper_zab.md)
+* [ZooKeeper 之基本概念与使用](/docs/distributed-system/Zookeeper/02_zookeeper_use.md)
+* [ZooKeeper 之 Watcher](/docs/distributed-system/Zookeeper/06_zookeeper_watcher.md)
+* [ZooKeeper 之 ACL](/docs/distributed-system/Zookeeper/06_zookeeper_acl.md)
+* [ZooKeeper 之客户端 API 的使用](/docs/distributed-system/Zookeeper/03_zookeeper_client.md)
+* [ZooKeeper 之Curator](/docs/distributed-system/Zookeeper/04_zookeeper_curator.md)
+* [ZooKeeper 之使用场景总结](/docs/distributed-system/Zookeeper/05_zookeeper_scenes.md)
+* [ZooKeeper 之 Leader 选举](/docs/distributed-system/Zookeeper/06_zookeeper_leader.md)
+* [ZooKeeper 之数据同步](/docs/distributed-system/Zookeeper/06_zookeeper_data.md)
+* [ZooKeeper 之 Session](/docs/distributed-system/Zookeeper/06_zookeeper_session.md)
+* [ZooKeeper 之其他核心知识点](/docs/distributed-system/Zookeeper/06_zookeeper_core.md)
 
 咱们可以带着常见的一些问题去学习上面的内容，并且在上面的内容中可以找到下列问题的答案。
 

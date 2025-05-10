@@ -1,9 +1,6 @@
----
-title: Spring Cloud Gateway常见问题总结
-category: 分布式
----
+# Spring Cloud Gateway常见问题总结
 
-> 本文重构完善自[6000 字 | 16 图 | 深入理解 Spring Cloud Gateway 的原理 - 悟空聊架构](https://mp.weixin.qq.com/s/XjFYsP1IUqNzWqXZdJn-Aw)这篇文章。
+> 原文： [深入理解 Spring Cloud Gateway 的原理 - 悟空聊架构](https://mp.weixin.qq.com/s/XjFYsP1IUqNzWqXZdJn-Aw)
 
 ## 什么是 Spring Cloud Gateway？
 
@@ -153,5 +150,3 @@ public class GlobalErrorWebExceptionHandler implements ErrorWebExceptionHandler 
 - Spring Cloud Gateway 官方文档：<https://cloud.spring.io/spring-cloud-gateway/reference/html/>
 - Creating a custom Spring Cloud Gateway Filter：<https://spring.io/blog/2022/08/26/creating-a-custom-spring-cloud-gateway-filter>
 - 全局异常处理: <https://zhuanlan.zhihu.com/p/347028665>
-
-<!-- @include: @article-footer.snippet.md -->

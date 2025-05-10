@@ -1,7 +1,4 @@
----
-title: API网关基础知识总结
-category: 分布式
----
+# API网关基础知识总结
 
 ## 什么是网关？
 
@@ -207,5 +204,3 @@ Kong 和 APISIX 功能更丰富，性能更强大，技术架构更贴合云原�
 - API 网关 Kong 实战：<https://xie.infoq.cn/article/10e4dab2de0bdb6f2c3c93da6>
 - Spring Cloud Gateway 原理介绍和应用：<https://blog.fintopia.tech/60e27b0e2078082a378ec5ed/>
 - 微服务为什么要用到 API 网关？：<https://apisix.apache.org/zh/blog/2023/03/08/why-do-microservices-need-an-api-gateway/>
-
-<!-- @include: @article-footer.snippet.md -->

@@ -1,11 +1,4 @@
----
-title: RPC基础知识总结
-category: 分布式
-tag:
-  - rpc
----
-
-这篇文章会简单介绍一下 RPC 相关的基础概念。
+# RPC 
 
 ## RPC 是什么?
 
@@ -137,5 +130,3 @@ Dubbo 也是 Spring Cloud Alibaba 里面的一个组件。
 ## 既然有了 HTTP 协议，为什么还要有 RPC ？
 
 关于这个问题的详细答案，请看这篇文章：[有了 HTTP 协议，为什么还要有 RPC ？](http&rpc.md) 。
-
-<!-- @include: @article-footer.snippet.md -->
