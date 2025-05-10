@@ -8,42 +8,106 @@
    <meta name="description" content="">
    <title></title>
 
-  <!-- Themes (light + dark) -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-  <!-- Custom Styles -->
-  <style>
-     img {
-       max-width: 100%;
-       max-height: 400px; /* 或者你想要的最大高度 */
-       display: block; /* 让图片独占一行 */
-       margin: 0 auto; /* 居中图片 */
-     }
-  </style>
+   <!-- Themes (light + dark) -->
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+   <!-- Custom Styles -->
+   <style>
+      img {
+        max-width: 100%;
+        max-height: 400px; /* 或者你想要的最大高度 */
+        display: block; /* 让图片独占一行 */
+        margin: 0 auto; /* 居中图片 */
+      }
+   </style>
 </head>
 <body>
-  <div id="app"></div>
+   <div id="app"></div>
 
-  <script>
-    // Docsify Configuration
-    window.$docsify = {
-       name: '隔壁王小猿的博客',
-       repo: 'https://github.com/gbwxy/blogs',
-       maxLevel: 8,//最大支持渲染的标题层级
-       subMaxLevel: 0,
-       homepage: 'README.md',
-       coverpage: false,
-       loadSidebar: true,
-       loadNavbar: true,
-       auto2top: true,//切换页面后是否自动跳转到页面顶部
-       toc: true,
-       tocFolat: true
-    }
-  </script>
+   <script>
+     // Docsify Configuration
+     window.$docsify = {
+        name: '隔壁王小猿的博客',
+        repo: 'https://github.com/gbwxy/blogs',
+        maxLevel: 8,//最大支持渲染的标题层级
+        subMaxLevel: 0,
+        homepage: 'README.md',
+        coverpage: false,
+        loadSidebar: true,
+        loadNavbar: true,
+        auto2top: true,//切换页面后是否自动跳转到页面顶部
+        // 页面右侧toc
+        toc: {
+          tocMaxLevel: 3,
+          target: "h2, h3, h4, h5, h6",
+        },
+        search: 'auto', // 默认值
+        // 完整配置参数
+        search: {
+          maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+          paths: [], // or 'auto'
+          placeholder: 'Type to search',
 
-  <!-- Docsify core -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+          // 支持本地化
+          placeholder: {
+            '/zh-cn/': '搜索',
+            '/': 'Type to search'
+          },
 
-  <!-- Plugins -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+          noData: 'No Results!',
+
+          // 支持本地化
+          noData: {
+            '/zh-cn/': '找不到结果',
+            '/': 'No Results'
+          },
+
+          // 搜索标题的最大层级, 1 - 6
+          depth: 2,
+
+          hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+
+          // 避免搜索索引冲突
+          // 同一域下的多个网站之间
+          namespace: 'website-1',
+
+          // 使用不同的索引作为路径前缀（namespaces）
+          // 注意：仅适用于 paths: 'auto' 模式
+          //
+          // 初始化索引时，我们从侧边栏查找第一个路径
+          // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+          pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+          // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+          // 匹配到的字符串将被用来识别索引
+          pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+        },
+        count:{
+          countable:true,
+          fontsize:'0.9em',
+          color:'rgb(90,90,90)',
+          language:'chinese'
+        },
+        plugins: [
+         
+        ],
+        themeable: {
+          readyTransition : true, // default
+          responsiveTables: true  // default
+        },
+     };
+   </script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+   <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 </body>
 </html>
