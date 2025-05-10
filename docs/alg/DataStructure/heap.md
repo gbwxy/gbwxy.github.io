@@ -1,7 +1,7 @@
 # 堆
 
-> Java 中的 PriorityQueue 是基于一个 最小堆（Min-Heap） 实现的。
-> 参考：[PriorityQueue](/docs/Java/basic/PriorityQueue.md)
+>  Java 中的 PriorityQueue 是基于一个 最小堆（Min-Heap） 实现的。
+>  [PriorityQueue](/docs/Java/basic/PriorityQueue.md)
 
 Heap 是一种数据结构具有以下的特点：
 
@@ -30,7 +30,7 @@ Heap 是一种数据结构具有以下的特点：
 
 大家可以尝试判断下面给出的图是否是堆？
 
-![](../../../resources/image/algorithms/堆1-XFna5NAD.png)
+![](../../../resources/image/algorithms/堆1.png)
 
 第 1 个和第 2 个是堆。第 1 个是最大堆，每个节点都比子树中所有节点大。第 2 个是最小堆，每个节点都比子树中所有节点小。
 
@@ -55,7 +55,7 @@ Heap 是一种数据结构具有以下的特点：
 
 如下图所示，图 1 是最大堆，图 2 是最小堆
 
-![](../../../resources/image/algorithms/堆2-m3vzmcJq.png)
+![](../../../resources/image/algorithms/堆2.png)
 
 ## 堆的存储
 
