@@ -13,7 +13,7 @@
 
 ## 操作系统基础
 
-![](https://oss.javaguide.cn/2020-8/image-20200807161118901.png)
+![](./images/image-20200807161118901.png)
 
 ### 什么是操作系统？
 
@@ -31,7 +31,7 @@
 
 下图清晰说明了应用程序、内核、CPU 这三者的关系。
 
-![Kernel_Layout](https://oss.javaguide.cn/2020-8/Kernel_Layout.png)
+![Kernel_Layout](./images/Kernel_Layout.png)
 
 ### 操作系统主要有哪些功能？
 
@@ -70,7 +70,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 >
 > **很多人更倾向使用 “GNU/Linux” 一词来表达人们通常所说的 “Linux”。**
 
-![Linux 操作系统](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/linux/linux.png)
+![Linux 操作系统](./images/linux.png)
 
 #### Mac OS
 
@@ -87,7 +87,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 - **用户态(User Mode)** : 用户态运行的进程可以直接读取用户程序的数据，拥有较低的权限。当应用程序需要执行某些需要特殊权限的操作，例如读写磁盘、网络通信等，就需要向操作系统发起系统调用请求，进入内核态。
 - **内核态(Kernel Mode)**：内核态运行的进程几乎可以访问计算机的任何资源包括系统的内存空间、设备、驱动程序等，不受限制，拥有非常高的权限。当操作系统接收到进程的系统调用请求时，就会从用户态切换到内核态，执行相应的系统调用，并将结果返回给进程，最后再从内核态切换回用户态。
 
-![用户态和内核态](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/usermode-and-kernelmode.png)
+![用户态和内核态](./images/usermode-and-kernelmode.png)
 
 内核态相比用户态拥有更高的特权级别，因此能够执行更底层、更敏感的操作。不过，由于进入内核态需要付出较高的开销（需要进行一系列的上下文切换和权限检查），应该尽量减少进入内核态的次数，以提高系统的性能和稳定性。
 
@@ -100,7 +100,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 
 #### 用户态和内核态是如何切换的？
 
-![用户态切换到内核态的 3 种方式](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/the-way-switch-between-user-mode-and-kernel-mode.drawio.png)
+![用户态切换到内核态的 3 种方式](./images/the-way-switch-between-user-mode-and-kernel-mode.drawio.png)
 
 用户态切换到内核态的 3 种方式：
 
@@ -118,7 +118,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 
 也就是说在我们运行的用户程序中，凡是与系统态级别的资源有关的操作（如文件管理、进程控制、内存管理等)，都必须通过系统调用方式向操作系统提出服务请求，并由操作系统代为完成。
 
-![系统调用](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/system-call.png)
+![系统调用](./images/system-call.png)
 
 这些系统调用按功能大致可分为如下几类：
 
@@ -139,7 +139,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 2. 发生中断后，当前 CPU 执行的程序会中断，跳转到中断处理程序。内核程序开始执行，也就是开始处理系统调用。
 3. 当系统调用处理完成后，操作系统使用特权指令（如 `iret`、`sysret` 或 `eret`）切换回用户态，恢复用户态的上下文，继续执行用户程序。
 
-![系统调用的过程](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/system-call-procedure.png)
+![系统调用的过程](./images/system-call-procedure.png)
 
 ## 进程和线程
 
@@ -152,7 +152,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 
 下图是 Java 内存区域，我们从 JVM 的角度来说一下线程和进程之间的关系吧！
 
-![Java 运行时数据区域（JDK1.8 之后）](https://oss.javaguide.cn/github/javaguide/java/jvm/java-runtime-data-areas-jdk1.8.png)
+![Java 运行时数据区域（JDK1.8 之后）](./images/java-runtime-data-areas-jdk1.8.png)
 
 从上图可以看出：一个进程中可以有多个线程，多个线程共享进程的**堆**和**方法区 (JDK1.8 之后的元空间)**资源，但是每个线程有自己的**程序计数器**、**虚拟机栈** 和 **本地方法栈**。
 
@@ -218,7 +218,7 @@ PCB 主要包含下面几部分的内容：
 - **阻塞状态(waiting)**：又称为等待状态，进程正在等待某一事件而暂停运行如等待某资源为可用或等待 IO 操作完成。即使处理器空闲，该进程也不能运行。
 - **结束状态(terminated)**：进程正在从系统中消失。可能是进程正常结束或其他原因中断退出运行。
 
-![进程状态图转换图](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/state-transition-of-process.png)
+![进程状态图转换图](./images/state-transition-of-process.png)
 
 ### 进程间的通信方式有哪些？
 
@@ -234,7 +234,7 @@ PCB 主要包含下面几部分的内容：
 
 ### 进程的调度算法有哪些?
 
-![常见进程调度算法](https://oss.javaguide.cn/github/javaguide/cs-basics/network/scheduling-algorithms-of-process.png)
+![常见进程调度算法](./images/scheduling-algorithms-of-process.png)
 
 这是一个很重要的知识点！为了确定首先执行哪个进程以及最后执行哪个进程以实现最大 CPU 利用率，计算机科学家已经定义了一些算法，它们是：
 
@@ -259,7 +259,7 @@ PCB 主要包含下面几部分的内容：
 
 Linux 下可以使用 Top 命令查找，`zombie` 值表示僵尸进程的数量，为 0 则代表没有僵尸进程。
 
-![僵尸进程查看](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/zombie-process-view.jpg)
+![僵尸进程查看](./images/zombie-process-view.jpg)
 
 下面这个命令可以定位僵尸进程以及该僵尸进程的父进程：
 

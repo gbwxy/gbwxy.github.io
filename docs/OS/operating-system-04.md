@@ -1,4 +1,3 @@
-
 ## 死锁
 
 ### 什么是死锁？
@@ -33,7 +32,7 @@
 
 下面通过一个实际的例子来模拟下图展示的线程死锁：
 
-![线程死锁示意图 ](https://oss.javaguide.cn/github/javaguide/java/2019-4%E6%AD%BB%E9%94%811-20230814005444749.png)
+![线程死锁示意图 ](./images/2019-4%E6%AD%BB%E9%94%811-20230814005444749.png)
 
 ```java
 public class DeadLockDemo {
@@ -146,7 +145,7 @@ Thread[线程 2,5,main]waiting get resource1
 
 图中 2-21 是**进程-资源分配图**的一个例子，其中共有三个资源类，每个进程的资源占有和申请情况已清楚地表示在图中。在这个例子中，由于存在 **占有和等待资源的环路** ，导致一组进程永远处于等待资源的状态，发生了 **死锁**。
 
-![进程-资源分配图](https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/process-resource-allocation-diagram.jpg)
+![进程-资源分配图](./images/process-resource-allocation-diagram.jpg)
 
 进程-资源分配图中存在环路并不一定是发生了死锁。因为循环等待资源仅仅是死锁发生的必要条件，而不是充分条件。图 2-22 便是一个有环路而无死锁的例子。虽然进程 P1 和进程 P3 分别占用了一个资源 R1 和一个资源 R2，并且因为等待另一个资源 R2 和另一个资源 R1 形成了环路，但进程 P2 和进程 P4 分别占有了一个资源 R1 和一个资源 R2，它们申请的资源得到了满足，在有限的时间里会归还资源，于是进程 P1 或 P3 都能获得另一个所需的资源，环路自动解除，系统也就不存在死锁状态了。
 
