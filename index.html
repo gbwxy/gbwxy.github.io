@@ -35,6 +35,11 @@
         loadSidebar: true,
         loadNavbar: true,
         auto2top: true,//切换页面后是否自动跳转到页面顶部
+        // 页面右侧toc
+        toc: {
+          tocMaxLevel: 2,
+          target: "h1, h2, h3, h4, h5, h6",
+        },
         search: 'auto', // 默认值
         // 完整配置参数
         search: {
@@ -85,11 +90,6 @@
         plugins: [
          
         ],
-        // 页面右侧toc
-        toc: {
-          tocMaxLevel: 3,
-          target: "h2, h3, h4, h5, h6",
-        },
         themeable: {
           readyTransition : true, // default
           responsiveTables: true  // default
