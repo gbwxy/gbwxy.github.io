@@ -35,11 +35,6 @@
         loadSidebar: true,
         loadNavbar: true,
         auto2top: true,//切换页面后是否自动跳转到页面顶部
-        // 页面右侧toc
-        toc: {
-          tocMaxLevel: 3,
-          target: "h2, h3, h4, h5, h6",
-        },
         search: 'auto', // 默认值
         // 完整配置参数
         search: {
@@ -90,6 +85,11 @@
         plugins: [
          
         ],
+        // 页面右侧toc
+        toc: {
+          tocMaxLevel: 3,
+          target: "h2, h3, h4, h5, h6",
+        },
         themeable: {
           readyTransition : true, // default
           responsiveTables: true  // default
@@ -97,17 +97,32 @@
      };
    </script>
    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
    <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
-   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+   <!-- docsify -->
    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
    <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+   <!-- 字数统计 -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+   <!-- 页面右侧 TOC -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
+   <!-- 全文搜索 -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+   <!-- 图片放大缩小 -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+   <!-- emoji -->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+   <!-- 代码高亮  https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script> 
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cmake.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>     
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-docker.min.js"></script>  
+   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>  
+
 </body>
 </html>
