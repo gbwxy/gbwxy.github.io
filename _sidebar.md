@@ -10,5 +10,5 @@
 * [Redis](/docs/Redis/)
 * [Spring&SpringBoot](/docs/Spring/)
 * [Java](/docs/Java/)
-* [网络](/docs/Network/)
+* [计算机网络](/docs/Network/)
 * [操作系统](/docs/OS/)

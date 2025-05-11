@@ -1,11 +1,4 @@
----
-title: 计算机网络常见面试题总结(下)
-category: 计算机基础
-tag:
-  - 计算机网络
----
-
-下篇主要是传输层和网络层相关的内容。
+# 计算机网络-传输层和网络层
 
 ## TCP 与 UDP
 
@@ -236,5 +229,3 @@ ARP 协议，全称 **地址解析协议（Address Resolution Protocol）**，�
 - 什么是 Internet 协议（IP）？：<https://www.cloudflare.com/zh-cn/learning/network-layer/internet-protocol/>
 - 透传真实源 IP 的各种方法 - 极客时间：<https://time.geekbang.org/column/article/497864>
 - What Is NAT and What Are the Benefits of NAT Firewalls?：<https://community.fs.com/blog/what-is-nat-and-what-are-the-benefits-of-nat-firewalls.html>
-
-<!-- @include: @article-footer.snippet.md -->

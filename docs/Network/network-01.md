@@ -1,13 +1,4 @@
----
-title: 计算机网络常见面试题总结(上)
-category: 计算机基础
-tag:
-  - 计算机网络
----
-
-<!-- @include: @small-advertisement.snippet.md -->
-
-上篇主要是计算机网络基础和应用层相关的内容。
+# 计算机网络-基础与应用层
 
 ## 计算机网络基础
 
@@ -486,5 +477,3 @@ DNS 劫持是一种网络攻击，它通过修改 DNS 服务器的解析结果�
 - HTTP 请求头字段大全| HTTP Request Headers：<https://www.flysnow.org/tools/table/http-request-headers/>
 - HTTP1、HTTP2、HTTP3：<https://juejin.cn/post/6855470356657307662>
 - 如何看待 HTTP/3 ？ - 车小胖的回答 - 知乎: <https://www.zhihu.com/question/302412059/answer/533223530>
-
-<!-- @include: @article-footer.snippet.md -->

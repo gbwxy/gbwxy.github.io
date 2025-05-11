@@ -1,9 +1,4 @@
----
-title: HTTP 1.0 vs HTTP 1.1（应用层）
-category: 计算机基础
-tag:
-  - 计算机网络
----
+# HTTP 1.0 vs HTTP 1.1（应用层）
 
 这篇文章会从下面几个维度来对比 HTTP 1.0 和 HTTP 1.1：
 
@@ -164,5 +159,3 @@ HTTP/1.0 包含了`Content-Encoding`头部，对消息进行端到端编码。HT
 ## 参考资料
 
 [Key differences between HTTP/1.0 and HTTP/1.1](http://www.ra.ethz.ch/cdstore/www8/data/2136/pdf/pd1.pdf)
-
-<!-- @include: @article-footer.snippet.md -->

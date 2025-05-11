@@ -1,9 +1,4 @@
----
-title: TCP 三次握手和四次挥手（传输层）
-category: 计算机基础
-tag:
-  - 计算机网络
----
+# TCP 三次握手和四次挥手
 
 为了准确无误地把数据送达目标处，TCP 协议采用了三次握手策略。
 
@@ -99,5 +94,3 @@ TCP 是全双工通信，可以双向传输数据。任何一方都可以在数�
 - TCP and UDP Tutorial：<https://www.9tut.com/tcp-and-udp-tutorial>
 
 - 从一次线上问题说起，详解 TCP 半连接队列、全连接队列：<https://mp.weixin.qq.com/s/YpSlU1yaowTs-pF6R43hMw>
-
-<!-- @include: @article-footer.snippet.md -->

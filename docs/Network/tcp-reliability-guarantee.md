@@ -1,9 +1,4 @@
----
-title: TCP 传输可靠性保障（传输层）
-category: 计算机基础
-tag:
-  - 计算机网络
----
+# TCP 传输可靠性保障（传输层）
 
 ## TCP 如何保证传输的可靠性？
 
@@ -124,5 +119,3 @@ RTT 的值会随着网络的波动而变化，所以 TCP 不能直接使用 RTT 
 5. TCP Flow Control—[https://www.brianstorti.com/tcp-flow-control/](https://www.brianstorti.com/tcp-flow-control/)
 6. TCP 流量控制(Flow Control)：<https://notfalse.net/24/tcp-flow-control>
 7. TCP 之滑动窗口原理 : <https://cloud.tencent.com/developer/article/1857363>
-
-<!-- @include: @article-footer.snippet.md -->

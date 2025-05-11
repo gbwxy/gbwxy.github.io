@@ -1,9 +1,4 @@
----
-title: DNS 域名系统详解（应用层）
-category: 计算机基础
-tag:
-  - 计算机网络
----
+# DNS 域名系统详解
 
 DNS（Domain Name System）域名管理系统，是当用户使用浏览器访问网址之后，使用的第一个重要协议。DNS 要解决的是**域名和 IP 地址的映射问题**。
 
@@ -104,5 +99,3 @@ foo.example.com.        A      192.0.2.23
 - DNS 服务器类型：<https://www.cloudflare.com/zh-cn/learning/dns/dns-server-types/>
 - DNS Message Resource Record Field Formats：<http://www.tcpipguide.com/free/t_DNSMessageResourceRecordFieldFormats-2.htm>
 - Understanding Different Types of Record in DNS Server：<https://www.mustbegeek.com/understanding-different-types-of-record-in-dns-server/>
-
-<!-- @include: @article-footer.snippet.md -->

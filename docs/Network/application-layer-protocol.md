@@ -1,9 +1,4 @@
----
-title: 应用层常见协议总结（应用层）
-category: 计算机基础
-tag:
-  - 计算机网络
----
+# 应用层协议总结
 
 ## HTTP:超文本传输协议
 
@@ -141,5 +136,3 @@ DNS（Domain Name System，域名管理系统）基于 UDP 协议，用于解决
 
 - 《计算机网络自顶向下方法》（第七版）
 - RTP 协议介绍:<https://mthli.xyz/rtp-introduction/>
-
-<!-- @include: @article-footer.snippet.md -->
