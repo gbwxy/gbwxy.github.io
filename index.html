@@ -40,6 +40,15 @@
           tocMaxLevel: 4,
           target: "h1, h2, h3, h4, h5, h6",
         },
+        //全文搜索
+        search: {
+          maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+          paths: 'auto',
+          placeholder: '搜索',
+          noData: '找不到结果',
+          // 搜索标题的最大程级, 1 - 6
+          depth: 3,
+        },
         count:{
           countable:true,
           fontsize:'0.9em',
@@ -65,6 +74,8 @@
     <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
     <!-- 页面右侧 TOC -->
     <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
+    <!--全文搜索,直接用官方提供的无法生效-->
+    <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
     <!-- 图片放大缩小 -->
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
     <!-- emoji -->
