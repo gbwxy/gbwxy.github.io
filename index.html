@@ -49,6 +49,13 @@
           // 搜索标题的最大程级, 1 - 6
           depth: 3,
         },
+        // 底部导航
+        pagination: {
+          previousText: "上一页",
+          nextText: "下一页",
+          crossChapter: true,
+          crossChapterText: true,
+        },
         count:{
           countable:true,
           fontsize:'0.9em',
@@ -83,6 +90,10 @@
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>  
     <!-- 代码复制 -->
     <script src="/cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+    <!-- 底部 上一页下一页 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>
 
   </body>
 </html>
