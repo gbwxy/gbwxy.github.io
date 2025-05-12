@@ -1,10 +1,4 @@
----
-title: Spring&SpringBoot常用注解总结
-category: 框架
-tag:
-  - SpringBoot
-  - Spring
----
+# Spring&SpringBoot注解
 
 可以毫不夸张地说，这篇文章介绍的 Spring/SpringBoot 常用注解基本已经涵盖你工作中遇到的大部分常用的场景。对于每一个注解本文都提供了具体用法，掌握这些内容后，使用 Spring Boot 来开发项目基本没啥大问题了！
 
@@ -463,7 +457,7 @@ Bean Validation 本身只是一套**规范（接口和注解）**，我们需要
 </dependency>
 ```
 
-![](https://oss.javaguide.cn/2021/03/c7bacd12-1c1a-4e41-aaaf-4cad840fc073.png)
+![](./images/c7bacd12-1c1a-4e41-aaaf-4cad840fc073.png)
 
 非 SpringBoot 项目需要自行引入相关依赖包，这里不多做讲解，具体可以查看我的这篇文章：[如何在 Spring/Spring Boot 中做参数校验？你需要了解的都在这里！](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247485783&idx=1&sn=a407f3b75efa17c643407daa7fb2acd6&chksm=cea2469cf9d5cf8afbcd0a8a1c9cc4294d6805b8e01bee6f76bb2884c5bc15478e91459def49&token=292197051&lang=zh_CN#rd)。
 
@@ -1019,5 +1013,3 @@ public class MyServiceTest extends TestBase { // Assuming TestBase provides Spri
     }
 }
 ```
-
-<!-- @include: @article-footer.snippet.md -->
