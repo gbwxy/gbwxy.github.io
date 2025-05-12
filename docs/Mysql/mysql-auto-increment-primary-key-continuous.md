@@ -1,14 +1,5 @@
----
-title: MySQL自增主键一定是连续的吗
-category: 数据库
-tag:
-  - MySQL
-  - 大厂面试
----
+# MySQL自增主键一定是连续的吗
 
-> 作者：飞天小牛肉
->
-> 原文：<https://mp.weixin.qq.com/s/qci10h9rJx_COZbHV3aygQ>
 
 众所周知，自增主键可以让聚集索引尽量地保持递增顺序插入，避免了随机查询，从而提高了查询效率。
 
@@ -217,5 +208,3 @@ tag:
 2. 唯一键冲突
 3. 事务回滚
 4. 批量插入（如 `insert...select` 语句）
-
-<!-- @include: @article-footer.snippet.md -->

@@ -1,11 +1,4 @@
----
-title: MySQL三大日志(binlog、redo log和undo log)详解
-category: 数据库
-tag:
-  - MySQL
----
-
-> 本文来自公号程序猿阿星投稿，JavaGuide 对其做了补充完善。
+# MySQL三大日志(binlog、redo log和undo log)详解
 
 ## 前言
 
@@ -344,5 +337,3 @@ MySQL 数据库的**数据备份、主备、主主、主从**都离不开 binlog
 - 《从零开始带你成为 MySQL 实战优化高手》
 - 《MySQL 是怎样运行的：从根儿上理解 MySQL》
 - 《MySQL 技术 Innodb 存储引擎》
-
-<!-- @include: @article-footer.snippet.md -->

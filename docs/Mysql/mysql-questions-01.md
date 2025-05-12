@@ -1,19 +1,4 @@
----
-title: MySQL常见面试题总结
-category: 数据库
-tag:
-  - MySQL
-  - 大厂面试
-head:
-  - - meta
-    - name: keywords
-      content: MySQL基础,MySQL基础架构,MySQL存储引擎,MySQL查询缓存,MySQL事务,MySQL锁等内容。
-  - - meta
-    - name: description
-      content: 一篇文章总结MySQL常见的知识点和面试题，涵盖MySQL基础、MySQL基础架构、MySQL存储引擎、MySQL查询缓存、MySQL事务、MySQL锁等内容。
----
-
-<!-- @include: @small-advertisement.snippet.md -->
+# MySQL 总结
 
 ## MySQL 基础
 

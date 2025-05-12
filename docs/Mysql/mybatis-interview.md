@@ -1,23 +1,4 @@
----
-title: MyBatis常见面试题总结
-category: 框架
-icon: "database"
-tag:
-  - MyBatis
-head:
-  - - meta
-    - name: keywords
-      content: MyBatis
-  - - meta
-    - name: description
-      content: 几道常见的 MyBatis 常见
----
-
-<!-- @include: @small-advertisement.snippet.md -->
-
-> 本篇文章由 JavaGuide 收集自网络，原出处不明。
->
-> 比起这些枯燥的面试题，我更建议你看看文末推荐的 MyBatis 优质好文。
+# MyBatis常见问题总结
 
 ### #{} 和 \${} 的区别是什么？
 

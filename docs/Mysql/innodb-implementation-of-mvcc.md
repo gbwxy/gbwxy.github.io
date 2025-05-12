@@ -1,9 +1,4 @@
----
-title: InnoDB存储引擎对MVCC的实现
-category: 数据库
-tag:
-  - MySQL
----
+# InnoDB存储引擎对MVCC的实现
 
 ## 多版本并发控制 (Multi-Version Concurrency Control)
 

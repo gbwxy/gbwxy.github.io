@@ -1,11 +1,4 @@
----
-title: SQL语句在MySQL中的执行过程
-category: 数据库
-tag:
-  - MySQL
----
-
-> 本文来自[木木匠](https://github.com/kinglaw1204)投稿。
+# 一条SQL的执行过程
 
 本篇文章会分析下一个 SQL 语句在 MySQL 中的执行流程，包括 SQL 的查询在 MySQL 内部会怎么流转，SQL 语句的更新是怎么完成的。
 
@@ -133,5 +126,3 @@ update tb_student A set A.age='19' where A.name=' 张三 ';
 
 - 《MySQL 实战 45 讲》
 - MySQL 5.6 参考手册:<https://dev.MySQL.com/doc/refman/5.6/en/>
-
-<!-- @include: @article-footer.snippet.md -->

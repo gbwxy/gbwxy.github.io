@@ -1,11 +1,4 @@
----
-title: MySQL索引详解
-category: 数据库
-tag:
-  - MySQL
----
-
-> 感谢[WT-AHA](https://github.com/WT-AHA)对本文的完善，相关 PR：<https://github.com/Snailclimb/JavaGuide/pull/1648> 。
+# MySQL索引详解
 
 但凡经历过几场面试的小伙伴，应该都清楚，数据库索引这个知识点在面试中出现的频率高到离谱。
 
@@ -545,5 +538,3 @@ mysql> EXPLAIN SELECT `score`,`name` FROM `cus_order` ORDER BY `score` DESC;
 | Extra         | 附加信息                                     |
 
 篇幅问题，我这里只是简单介绍了一下 MySQL 执行计划，详细介绍请看：[MySQL 执行计划分析](./mysql-query-execution-plan.md)这篇文章。
-
-<!-- @include: @article-footer.snippet.md -->
