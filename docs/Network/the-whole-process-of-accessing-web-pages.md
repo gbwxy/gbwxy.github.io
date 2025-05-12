@@ -4,7 +4,7 @@
 
 总的来说，网络通信模型可以用下图来表示，也就是大家只要熟记网络结构五层模型，按照这个体系，很多知识点都能顺出来了。访问网页的过程也是如此。
 
-![](https://oss.javaguide.cn/github/javaguide/cs-basics/network/five-layers.png)
+![](./images/five-layers.png)
 
 开始之前，我们先简单过一遍完整流程：
 
@@ -26,7 +26,7 @@ URL（Uniform Resource Locators），即统一资源定位器。网络上的所�
 
 ### URL 的组成结构
 
-![URL的组成结构](https://oss.javaguide.cn/github/javaguide/cs-basics/network/URL-parts.png)
+![URL的组成结构](./images/URL-parts.png)
 
 1. 协议。URL 的前缀通常表示了该网址采用了何种应用层协议，通常有两种——HTTP 和 HTTPS。当然也有一些不太常见的前缀头，比如文件传输时用到的`ftp:`。
 2. 域名。域名便是访问网址的通用名，这里也有可能是网址的 IP 地址，域名可以理解为 IP 地址的可读版本，毕竟绝大部分人都不会选择记住一个网址的 IP 地址。
@@ -47,9 +47,9 @@ URL（Uniform Resource Locators），即统一资源定位器。网络上的所�
 
 传送门：
 
-- [HTTP vs HTTPS（应用层）](https://javaguide.cn/cs-basics/network/http-vs-https.html)
-- [HTTP 1.0 vs HTTP 1.1（应用层）](https://javaguide.cn/cs-basics/network/http1.0-vs-http1.1.html)
-- [HTTP 常见状态码总结（应用层）](https://javaguide.cn/cs-basics/network/http-status-codes.html)
+- [HTTP vs HTTPS（应用层）](./http-vs-https.md)
+- [HTTP 1.0 vs HTTP 1.1（应用层）](./http1.0-vs-http1.1.md)
+- [HTTP 常见状态码总结（应用层）](./http-status-codes.md)
 
 ## 传输层
 
@@ -59,8 +59,8 @@ TCP 协议保证了数据传输的可靠性，是数据包传输的主力协议�
 
 传送门：
 
-- [TCP 三次握手和四次挥手（传输层）](https://javaguide.cn/cs-basics/network/tcp-connection-and-disconnection.html)
-- [TCP 传输可靠性保障（传输层）](https://javaguide.cn/cs-basics/network/tcp-reliability-guarantee.html)
+- [TCP 三次握手和四次挥手（传输层）](./tcp-connection-and-disconnection.md)
+- [TCP 传输可靠性保障（传输层）](./tcp-reliability-guarantee.md)
 
 ## 网络层
 

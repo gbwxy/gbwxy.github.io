@@ -6,7 +6,7 @@
 
 HTTP 使用客户端-服务器模型，客户端向服务器发送 HTTP Request（请求），服务器响应请求并返回 HTTP Response（响应），整个过程如下图所示。
 
-![](https://oss.javaguide.cn/github/javaguide/450px-HTTP-Header.png)
+![](./images/450px-HTTP-Header.png)
 
 HTTP 协议基于 TCP 协议，发送 HTTP 请求之前首先要建立 TCP 连接也就是要经历 3 次握手。目前使用的 HTTP 协议大部分都是 1.1。在 1.1 的协议里面，默认是开启了 Keep-Alive 的，这样的话建立的连接就可以在多次请求中被复用了。
 
@@ -20,7 +20,7 @@ WebSocket 协议在 2008 年诞生，2011 年成为国际标准，几乎所有�
 
 WebSocket 协议本质上是应用层的协议，用于弥补 HTTP 协议在持久通信能力上的不足。客户端和服务器仅需一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。
 
-![Websocket 示意图](https://oss.javaguide.cn/github/javaguide/system-design/web-real-time-message-push/1460000042192394.png)
+![Websocket 示意图](./images/system-design/web-real-time-message-push/1460000042192394.png)
 
 下面是 WebSocket 的常见应用场景：
 
@@ -44,7 +44,7 @@ WebSocket 的工作过程可以分为以下几个步骤：
 
 **简单邮件传输(发送)协议（SMTP，Simple Mail Transfer Protocol）** 基于 TCP 协议，是一种用于发送电子邮件的协议
 
-![SMTP 协议](https://oss.javaguide.cn/github/javaguide/cs-basics/network/what-is-smtp.png)
+![SMTP 协议](./images/cs-basics/network/what-is-smtp.png)
 
 注意 ⚠️：**接受邮件的协议不是 SMTP 而是 POP3 协议。**
 
@@ -95,7 +95,7 @@ FTP 是基于客户—服务器（C/S）模型而设计的，在客户端与 FTP
 >
 > 这种将命令和数据分开传送的思想大大提高了 FTP 的效率。
 
-![FTP工作过程](https://oss.javaguide.cn/github/javaguide/cs-basics/network/ftp.png)
+![FTP工作过程](./images/cs-basics/network/ftp.png)
 
 注意 ⚠️：FTP 是一种不安全的协议，因为它在传输过程中不会对数据进行加密。因此，FTP 传输的文件可能会被窃听或篡改。建议在传输敏感数据时使用更安全的协议，如 SFTP（SSH File Transfer Protocol，一种基于 SSH 协议的安全文件传输协议，用于在网络上安全地传输文件）。
 
@@ -103,7 +103,7 @@ FTP 是基于客户—服务器（C/S）模型而设计的，在客户端与 FTP
 
 **Telnet 协议** 基于 TCP 协议，用于通过一个终端登陆到其他服务器。Telnet 协议的最大缺点之一是所有数据（包括用户名和密码）均以明文形式发送，这有潜在的安全风险。这就是为什么如今很少使用 Telnet，而是使用一种称为 SSH 的非常安全的网络传输协议的主要原因。
 
-![Telnet:远程登陆协议](https://oss.javaguide.cn/github/javaguide/cs-basics/network/Telnet_is_vulnerable_to_eavesdropping-2.png)
+![Telnet:远程登陆协议](./images/cs-basics/network/Telnet_is_vulnerable_to_eavesdropping-2.png)
 
 ## SSH:安全的网络传输协议
 
@@ -115,7 +115,7 @@ SSH 使用客户端-服务器模型，默认端口是 22。SSH 是一个守护�
 
 如下图所示，SSH Client（SSH 客户端）和 SSH Server（SSH 服务器）通过公钥交换生成共享的对称加密密钥，用于后续的加密通信。
 
-![SSH:安全的网络传输协议](https://oss.javaguide.cn/github/javaguide/cs-basics/network/ssh-client-server.png)
+![SSH:安全的网络传输协议](./images/cs-basics/network/ssh-client-server.png)
 
 ## RTP:实时传输协议
 
@@ -130,7 +130,7 @@ RTP 协议分为两种子协议：
 
 DNS（Domain Name System，域名管理系统）基于 UDP 协议，用于解决域名和 IP 地址的映射问题。
 
-![DNS:域名系统](https://oss.javaguide.cn/github/javaguide/cs-basics/network/dns-overview.png)
+![DNS:域名系统](./images/cs-basics/network/dns-overview.png)
 
 ## 参考
 
